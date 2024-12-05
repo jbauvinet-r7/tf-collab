@@ -1,1 +1,0 @@
-﻿Add-Content -Path C:\s3-downloads\UseCases_Scripts\UseCase_4\Files\finance\finance.xlsx -Value (Get-Date)

@@ -1,6 +1,0 @@
-screen -dmS Austin bash -c "/home/ubuntu/Locations/Austin/Austin_simulator.sh"
-screen -dmS Boston bash -c "/home/ubuntu/Locations/Boston/Boston_simulator.sh"
-screen -dmS Rio bash -c "/home/ubuntu/Locations/Rio/Rio_simulator.sh"
-screen -dmS Melbourne bash -c "/home/ubuntu/Locations/Melbourne/Melbourne_simulator.sh"
-screen -dmS SanDiego bash -c "/home/ubuntu/Locations/SanDiego/SanDiego_simulator.sh"
-screen -dmS Reading bash -c "/home/ubuntu/Locations/Reading/Reading_simulator.sh"

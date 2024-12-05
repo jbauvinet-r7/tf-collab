@@ -1,1 +1,0 @@
-﻿Set-Content -Path C:\myinifile.ini -Value (Get-Date)

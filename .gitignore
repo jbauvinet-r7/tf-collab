@@ -51,3 +51,9 @@ s3bucket/files/Log_Generator/Log_Generator_BootCamp.zip
 s3bucket/files/Orchestrator-Scripts/r7-orchestrator-installer-ubuntu.sh
 s3bucket/files/Orchestrator-Scripts/r7-orchestrator-installer.sh
 s3bucket/files/Sensor_Scripts/sensor_installer.sh
+Subnet_Ressources/s3bucket/files/Log_Generator/Log_Generator_BootCamp.zip
+Subnet_Ressources/s3bucket/files/Log_Generator/Log_Generator_Selabs.zip
+Subnet_Ressources/network_sensor/magnitude_1hr.pcap
+Subnet_Ressources/network_sensor/magnitude_24hr.pcap
+Subnet_Ressources/network_sensor/17206289.zip
+Subnet_Ressources/s3bucket/files/Sensor_Scripts/sensor_installer.sh
