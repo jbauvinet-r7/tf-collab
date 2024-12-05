@@ -1,37 +1,53 @@
-# Local .terraform directories
-**/.terraform/*
 
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
-# Crash log files
-crash.log
-crash.*.log
-
-# Exclude all .tfvars files, which are likely to contain sensitive data, such as
-# password, private keys, and other secrets. These should not be part of version 
-# control as they are data points which are potentially sensitive and subject 
-# to change depending on the environment.
-*.tfvars
-*.tfvars.json
-
-# Ignore override files as they are usually used to override resources locally and so
-# are not checked in
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Ignore transient lock info files created by terraform apply
-.terraform.tfstate.lock.info
-
-# Include override files you do wish to add to version control using negated pattern
-# !example_override.tf
-
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
-
-# Ignore CLI configuration files
-.terraformrc
-terraform.rc
+.DS_Store
+/.terraform/providers
+.terraform/modules/networking.acm/
+*.pem
+tfvars_folder/
+Bootcamp-IDR/iam/s3bucket/files/S3_Bundle_Log_Generator_bc.zip
+Bootcamp-IDR/iam/s3bucket/files/sensor_installer.sh
+Bootcamp-IDR/iam/s3bucket/files/Tokyo.zip
+Bootcamp-IDR/iam/s3bucket/files/Los_Angeles.zip
+Bootcamp-IDR/iam/s3bucket/files/Belfast.zip
+Bootcamp-IDR-IVM/iam/s3bucket/files/S3_Bundle_Log_Generator_bc.zip
+Bootcamp-IDR-IVM/iam/s3bucket/files/sensor_installer.sh
+Bootcamp-IDR-IVM/iam/s3bucket/files/Tokyo.zip
+Bootcamp-IDR-IVM/iam/s3bucket/files/Los_Angeles.zip
+Bootcamp-IDR-IVM/iam/s3bucket/files/Belfast.zip
+s3bucket/files/Log_Generator_BootCamp.zip
+s3bucket/files/Tokyo.zip
+s3bucket/files/Anonymoose.zip
+/IVM_data_generator/outlaw-dev-tools-master
+IVM_data_generator/sites/Paris/scan.0.xlog
+IVM_data_generator/sites/Paris/scan.0.xlog.ctl
+/IVM_data_generator/selabdata
+IVM_data_generator/Scan_XLog/sources_edn/4.132.scan.1680925318599.xlog
+IVM_data_generator/Scan_XLog/sources_edn/global_scan.edn
+IVM_data_generator/Scan_XLog/sources_edn/scan.edn
+/IVM_data_generator/mandalore/IVMDATA
+/IVM_data_generator/mandalore/noetic_data
+/s3bucket/files/VulnLab
+test.json
+/IVM_data_generator/mustafar/IVM
+IVM_data_generator/mustafar/IVM.zip
+/IVM_data_generator/cloudcity/IVM
+IVM_data_generator/noetic_site/IVM/London/scan.0.xlog
+IVM_data_generator/noetic_site/IVM/London/scan.0.xlog.ctl
+scan.edn
+*.ctl
+*.xlog
+IVM_data_generator/tatooine/IVM.zip
+IVM_data_cloudcity.zip
+/IVM_data_cloudcity
+IVM_data_generator/skynet/IVM.zip
+/noetic-poc
+network_sensor/magnitude_24hr.pcap
+network_sensor/17206289.zip
+s3bucket/files/Log_Generator/Log_Generator_Labs.zip
+/IVM_data_generator/Scan_XLog
+s3bucket/files/Log_Generator/Log_Generator_Selabs.zip
+s3bucket/files/Log_Generator/Log_Generator_BootCamp.zip
+/s3bucket/files/Log_Generator/Log_Generator_BootCamp
+s3bucket/files/Orchestrator-Scripts/r7-orchestrator-installer-ubuntu.sh
+s3bucket/files/Orchestrator-Scripts/r7-orchestrator-installer.sh
+s3bucket/files/Sensor_Scripts/sensor_installer.sh

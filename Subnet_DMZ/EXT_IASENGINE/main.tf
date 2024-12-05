@@ -1,0 +1,48 @@
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#                                                                                                                                                                               #
+#                                                                Welcome to the Rapid7 Global Lab Terraform                                                                     #
+#                            Created by : Jean-Baptiste AUVINET                          Version : 1                          Date : 04/08/2024                                 #
+#                                                               Rapid7 Subnet IAS Engine Main Definitions                                                                       #
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#  IAS Engine                                                                                                                                                                                                                                
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+resource "aws_instance" "IASEngine_node" {
+  ami                     = var.ami
+  instance_type           = var.instance_type
+  key_name                = var.key_name
+  subnet_id               = var.external_subnets
+  private_ip              = var.Instance_IP
+  vpc_security_group_ids  = [var.external_sg]
+  disable_api_termination = true
+  iam_instance_profile    = var.Instance_Profile_Name
+  user_data               = var.user_data
+  tags = {
+    "Name"        = "${var.Tenant} - DMZ - ${var.ServerName}"
+    "Tenant"      = "${var.Tenant}"
+    "Owner_Email" = "${var.Owner_Email}"
+    "JIRA_ID"     = "${var.JIRA_ID}"
+
+  }
+  root_block_device {
+    volume_size = var.vol_size
+  }
+  metadata_options {
+    instance_metadata_tags = "enabled"
+  }
+  lifecycle {
+    ignore_changes = [ami]
+  }
+}
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#  EIP + Association                                                                                                                                                                                                                                                                    
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+resource "aws_eip_association" "eip_assoc_IASEngine_node" {
+  instance_id   = aws_instance.IASEngine_node.id
+  allocation_id = aws_eip.IASEngine_node.id
+}
+resource "aws_eip" "IASEngine_node" {
+  domain = "vpc"
+}
